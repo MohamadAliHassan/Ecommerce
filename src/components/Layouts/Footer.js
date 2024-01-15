@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 export const Footer = () => {
+  const date = new Date();
+  const now = date.getFullYear();
   return (
     <footer className="bg-white shadow dark:bg-gray-800">
       <div className="p-4 mx-auto max-w-screen-xl md:flex md:items-center md:justify-between md:p-6">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-          © 2030{" "}
+          © {now}
+          {"  "}
           <Link to="/" className="hover:underline">
             CodeBook
           </Link>
