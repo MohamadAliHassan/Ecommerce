@@ -1,3 +1,4 @@
+import { ProductCard } from "../../../components/Elements/ProductCard";
 export const FeaturedProducts = () => {
   return (
     <section className="my-20">
@@ -5,7 +6,9 @@ export const FeaturedProducts = () => {
         Featured eBooks
       </h1>
       <div className="flex flex-wrap justify-center lg:flex-row">
-        {/* Product Card */}
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </section>
   );
