@@ -1,4 +1,4 @@
-export const FilterBar = () => {
+export const FilterBar = ({ setShow }) => {
   return (
     <section className="filter">
       <div
@@ -16,6 +16,7 @@ export const FilterBar = () => {
           Filters
         </h5>
         <button
+          onClick={() => setShow(false)}
           type="button"
           data-drawer-dismiss="drawer-disable-body-scrolling"
           aria-controls="drawer-disable-body-scrolling"
