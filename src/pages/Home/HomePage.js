@@ -2,7 +2,7 @@ import { Hero } from "./components/Hero";
 import { FeaturedProducts } from "./components/FeaturedProducts";
 import { Testimonials } from "./components/Testimonials";
 import { Faq } from "./components/Faq";
-const HomePage = () => {
+export const HomePage = () => {
   return (
     <main>
       <Hero />
@@ -12,5 +12,3 @@ const HomePage = () => {
     </main>
   );
 };
-
-export default HomePage;

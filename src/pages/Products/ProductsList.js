@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { ProductCard } from "../../components/Elements/ProductCard";
+import { ProductCard } from "../../components/";
 import { FilterBar } from "./components/FilterBar";
 
 export const ProductsList = () => {
@@ -50,7 +50,7 @@ export const ProductsList = () => {
           ))}
         </div>
       </section>
-      {/* If this is true then display it is what && basically means. Pass setshow as a prop to be able to use it on close filter button */}
+      {/* If this is true then display it && basically what it  means. Pass setshow as a prop to be able to use it on close filter button */}
       {show && <FilterBar setShow={setShow} />}
     </main>
   );
