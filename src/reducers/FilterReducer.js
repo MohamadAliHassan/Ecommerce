@@ -2,8 +2,9 @@ export const filterReducer = (state, action) => {
   const { type, payload } = action;
 
   switch (type) {
+    //Where we return the updated state.
     case "PRODUCT_LIST":
-      return;
+      return { productList: payload.products };
 
     case "SORT_BY":
       return;
