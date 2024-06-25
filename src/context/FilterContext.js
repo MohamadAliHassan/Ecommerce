@@ -25,8 +25,51 @@ export const FilterProvider = ({ children }) => {
     });
   }
 
+  function bestSeller(products) {
+    return state.bestSellerOnly
+      ? products.filter((product) => product.in_stock === true)
+      : products;
+  }
+
+  function sort(products) {
+    if (state.sortBy === "lowtohigh") {
+      return products.sort((a, b) => Number(a.price - Number(b.price)));
+    }
+    if (state.sortBy === "hightolow") {
+      products.sort((a, b) => Number(b.price - Number(a.price)));
+    }
+    return products;
+  }
+
+  function inStock(products) {
+    return state.onlyInStock
+      ? products.filter((product) => product.in_stock === true)
+      : products;
+  }
+
+  function rating(products) {
+    if (state.ratings === "4STARSABOVE") {
+      return products.filter((product) => product.rating >= 4);
+    }
+    if (state.ratings === "3STARSABOVE") {
+      return products.filter((product) => product.rating >= 3);
+    }
+    if (state.ratings === "2STARSABOVE") {
+      return products.filter((product) => product.rating >= 2);
+    }
+    if (state.ratings === "1STARSABOVE") {
+      return products.filter((product) => product.rating >= 1);
+    }
+    return products;
+  }
+
+  //Re-evaluation of our state once the values/states changes according to use preference
+  const filteredProducts = rating(sort(inStock(bestSeller(state.productList))));
+
   const value = {
-    products: state.productList, // Get productList from state
+    state,
+    dispatch,
+    products: filteredProducts, // Get productList from state
     initProductList,
   };
 

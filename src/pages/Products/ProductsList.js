@@ -54,9 +54,9 @@ export const ProductsList = () => {
 
         <div className="flex flex-wrap justify-center lg:flex-row">
           {/* Product Card */}
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+          {products.map((product) => {
+            return <ProductCard key={product.id} product={product} />;
+          })}
         </div>
       </section>
       {/* If this is true then display it && basically what it  means. Pass setshow as a prop to be able to use it on close filter button */}

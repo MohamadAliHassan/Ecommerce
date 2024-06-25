@@ -42,7 +42,7 @@ export const ProductDetail = () => {
             </p>
             <p className="my-4 select-none">
               {product.best_seller && (
-                <span className="font-semibold text-amber-500 border bg-amber-50 rounded-lg px-3 py-1 mr-2">
+                <span className="font-semibold text-amber-600 border bg-amber-50 rounded-lg px-3 py-1 mr-2">
                   BEST SELLER
                 </span>
               )}
