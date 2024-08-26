@@ -283,6 +283,12 @@
       "password": "$2a$10$K9aEH3/VDb2QU/EsjrHGJO7X5JxCcg0bMAnBtyT3kBW9FL7FnnygO",
       "name": "Shubham Sarda",
       "id": 1
+    },
+    {
+      "email": "dummyemail@example.se",
+      "password": "$2a$10$fsBCm0ta06FYmK1mwa0W7uXEn8E.Cp.nFR/lIbuBpkqsrVVm.GYrO",
+      "name": "MohammedAli",
+      "id": 2
     }
   ]
 }

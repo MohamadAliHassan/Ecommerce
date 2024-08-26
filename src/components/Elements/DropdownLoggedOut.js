@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 export const DropdownLoggedOut = () => {
   return (
     <div
@@ -9,24 +10,24 @@ export const DropdownLoggedOut = () => {
         aria-labelledby="dropdownUserAvatarButton"
       >
         <li>
-          <a
-            href="/"
+          <Link
+            to="/products"
             className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
           >
             All eBooks
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="/"
+          <Link
+            to="/login"
             className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
           >
             Login
-          </a>
+          </Link>
         </li>
         <li>
           <a
-            href="/"
+            href="/register"
             className="block py-2 px-4 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
           >
             Register
