@@ -17,13 +17,18 @@ export const Register = () => {
     };
 
     const response = await fetch(
-      "http://localhost:8000/register",
+      "http://localhost:8000/Register",
       requestOptions
     );
 
     const data = await response.json();
     //Check if the data currently holds the accesstoken
     data.accessToken ? navigate("/products") : toast.error(data);
+
+    if (data.accessToken) {
+      sessionStorage.setItem("token", JSON.stringify(data.accessToken));
+      sessionStorage.setItem("cdid", JSON.stringify(data.user.id));
+    }
   }
   return (
     <main>
