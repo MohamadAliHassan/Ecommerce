@@ -1,4 +1,9 @@
+// import { Checkout } from "./components/Checkout";
+import { Checkout } from "./Checkout";
+import { useState } from "react";
+
 export const CartList = () => {
+  const [checkout, setCheckout] = useState();
   return (
     <>
       <section>
@@ -18,6 +23,7 @@ export const CartList = () => {
         </div>
         <div className="text-right my-5">
           <button
+            onclick={() => setCheckout(true)}
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-base px-7 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700"
           >
@@ -25,6 +31,7 @@ export const CartList = () => {
           </button>
         </div>
       </section>
+      {checkout && <Checkout setCheckout={setCheckout} />}
     </>
   );
 };

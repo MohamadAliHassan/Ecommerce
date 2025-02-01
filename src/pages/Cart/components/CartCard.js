@@ -1,16 +1,17 @@
+import { Link } from "react-router-dom";
 export const CartCard = () => {
   return (
     <div className="flex flex-wrap justify-between border-b dark:border-slate-700 max-w-4xl m-auto p-2 mb-5 ">
       <div className="flex">
-        <a href="">
+        <Link to="">
           <img className="w-32 rounded" src="" alt="" />
-        </a>
+        </Link>
         <div className="">
-          <a href="">
+          <Link to="">
             <p className="text-lg ml-2 dark:text-slate-200">
               The Complete Guide to Backend Development
             </p>
-          </a>
+          </Link>
           <button className="text-base ml-2 text-red-400">Remove</button>
         </div>
       </div>
