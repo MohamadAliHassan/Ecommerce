@@ -3,14 +3,16 @@ export const cartReducer = (state, action) => {
 
   switch (type) {
     case "ADD_TO_CART":
-      return { ...state, cartList: payload.products };
+      return { ...state, cartList: payload.products, total: payload.total };
+    //Return all the previous state
+
     case "REMOVE_FROM_CART":
-      return { ...state, cartList: payload.products };
+      return { ...state, cartList: payload.products, total: payload.total };
+
     case "CLEAR_CART":
       return { ...state, cartList: payload.products, total: payload.total };
-    case "UPDATE_PRICE":
-      return;
+
     default:
-      throw new Error("Unknown action type. No case found");
+      throw new Error("No case found in cartReducer");
   }
 };

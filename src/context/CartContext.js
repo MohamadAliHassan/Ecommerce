@@ -13,11 +13,13 @@ export const CartProvider = ({ children }) => {
 
   function addToCart(product) {
     const updateList = state.cartList.concat(product);
+    const updatedTotal = state.total + product.price;
 
     dispatch({
       type: "ADD_TO_CART",
       payload: {
         products: updateList,
+        total: updatedTotal,
       },
     });
   }
@@ -25,11 +27,13 @@ export const CartProvider = ({ children }) => {
   function removeFromCart(product) {
     //If its euqal, remove otherwise keep it.
     const updatedList = state.cartList.filter((item) => item.id !== product.id);
+    const updatedTotal = state.total - product.price;
 
     dispatch({
       type: "REMOVE_FROM_CART",
       payload: {
         product: updatedList,
+        total: updatedTotal,
       },
     });
   }

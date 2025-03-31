@@ -1,8 +1,10 @@
 import React from "react";
 import { CartEmpty } from "./components/CartEmpty";
 import { CartList } from "./components/CartList";
+import { useCart } from "../../context/CartContext";
 
 export const CartPage = () => {
-  const cartListLenght = 0;
-  return <main>{cartListLenght ? <CartList /> : <CartEmpty />}</main>;
+  const { cartList } = useCart();
+
+  return <main>{cartList.length ? <CartList /> : <CartEmpty />}</main>;
 };
